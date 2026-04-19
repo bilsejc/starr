@@ -2,8 +2,8 @@ import { useCallback, useEffect, useState } from "react";
 import type { Section, StarState } from "./types";
 import { DEFAULT_SECTIONS, TOTAL_STARS } from "./defaultSections";
 
-const LS_SECTIONS = "cosmos.sections.v1";
-const LS_STARS = "cosmos.stars.v1";
+const LS_SECTIONS = "cosmos.sections.v2";
+const LS_STARS = "cosmos.stars.v2";
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -79,8 +79,8 @@ export function useGameState() {
   }, []);
 
   const resetGame = useCallback(() => {
-    setStars(generateStars(sections));
-  }, [sections]);
+    setStars((prev) => prev.map((s) => ({ ...s, used: false })));
+  }, []);
 
   const updateSections = useCallback((next: Section[]) => {
     setSections(next);
