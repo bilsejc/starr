@@ -72,7 +72,7 @@ const Index = () => {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="mt-3 text-lg md:text-xl text-muted-foreground font-body"
         >
-          Жұлдызыңды таңдап, өз секцияңды біл!
+          Жұлдызыңды таңдап, өз ортаңызға бөлініңіз!
         </motion.p>
         <p className="mt-2 text-sm text-primary/80">
           Қалған жұлдыздар: <span className="font-bold text-primary">{remaining}</span> / {stars.length}
@@ -185,7 +185,7 @@ const Index = () => {
                   className="fixed bottom-12 left-1/2 -translate-x-1/2 z-40 text-center pointer-events-none"
                 >
                   <p className="font-display text-2xl md:text-3xl text-primary text-glow">
-                    Жұлдызды тағы бір рет бас 👆
+                    Жұлдызды тағы бір рет басыңыз 👆
                   </p>
                 </motion.div>
               )}
